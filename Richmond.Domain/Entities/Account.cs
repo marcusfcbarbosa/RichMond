@@ -67,8 +67,8 @@ namespace Richmond.Domain.Entities
         }
         public void SetBankingAndCard(string authorisedBank,string authorisedCard)
         {
-            AuthorisedBank = authorisedBank;//preciso criptografar
-            AuthorisedCard = authorisedCard;//preciso criptografar
+            AuthorisedBank = authorisedBank;
+            AuthorisedCard = authorisedCard;
         }
         public static class AccountFactory
         {

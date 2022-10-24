@@ -59,7 +59,6 @@ namespace Richmond.Domain.Commands
         }
         private bool CheckIfIsEmpty(string value)
         {
-            var teste = Guid.Parse(value) == Guid.Empty;
             return Guid.Parse(value) == Guid.Empty;
         }
     }
