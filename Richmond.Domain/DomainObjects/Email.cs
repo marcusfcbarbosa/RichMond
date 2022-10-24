@@ -6,12 +6,12 @@ namespace Richmond.Domain.DomainObjects
     {
         public const int EnderecoMaxLength = 254;
         public const int EnderecoMinLength = 5;
-        public string Endereco { get; private set; }
+        public string EmailAddress { get; private set; }
         protected Email() { }
-        public Email(string endereco)
+        public Email(string addrees)
         {
-            if (!Validate(endereco)) throw new DomainException("Invalid email");
-            Endereco = endereco;
+            if (!Validate(addrees)) throw new DomainException("Invalid email");
+            EmailAddress = addrees;
         }
         public static bool Validate(string email)
         {

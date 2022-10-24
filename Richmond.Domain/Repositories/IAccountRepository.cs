@@ -3,8 +3,9 @@ using Richmond.Domain.Entities;
 
 namespace Richmond.Domain.Repositories
 {
-    public interface IAccountRepository
+    public interface IAccountRepository : IBaseRepository<Account>
     {
+
     }
     public class AccountRepository : BaseRepository<Account>, IAccountRepository
     {
@@ -13,6 +14,16 @@ namespace Richmond.Domain.Repositories
             : base(context)
         {
             _context = context;
+        }
+
+        public void Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Account GetById(int id)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

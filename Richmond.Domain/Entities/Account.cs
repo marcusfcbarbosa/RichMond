@@ -32,7 +32,7 @@ namespace Richmond.Domain.Entities
         private Account() { }
         protected Account(string addressBody, string aref,
                        string authorisedBank, string authorisedCard, Guid campaignId,
-                       DateTime dateOfBirth, Email email, string firstName, Guid governmentID,
+                       DateTime dateOfBirth, string email, string firstName, Guid governmentID,
                        Guid lenderId, string middleName, decimal monthlyFee, Guid originatorId,
                        string postcode, DateTime? regularPaymentDay, string state, string surname,
                        string tel, Product product, decimal expectedPaymentAmount, string contract)
@@ -44,7 +44,7 @@ namespace Richmond.Domain.Entities
             Aref = aref;
             CampaignId = campaignId;
             DateOfBirth = dateOfBirth;
-            Email = email;
+            Email = new Email(email);
             FirstName = firstName;
             GovernmentID = governmentID;
             LenderId = lenderId;
@@ -74,7 +74,7 @@ namespace Richmond.Domain.Entities
         {
             public static Account NewAccount(string addressBody, string aref,
                        string authorisedBank, string authorisedCard, Guid campaignId,
-                       DateTime dateOfBirth, Email email, string firstName, Guid governmentID,
+                       DateTime dateOfBirth, string email, string firstName, Guid governmentID,
                        Guid lenderId, string middleName, decimal monthlyFee, Guid originatorId,
                        string postcode, DateTime? regularPaymentDay, string state, string surname,
                        string tel, Product product, decimal expectedPaymentAmount, string contract)
