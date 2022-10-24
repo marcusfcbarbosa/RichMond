@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>43e9c140-df57-47a9-9a5f-69a61d344d45</UserSecretsId>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.5.0" />
+		<PackageReference Include="MediatR" Version="9.0.0" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
+		
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Richmond.Domain\Richmond.Domain.csproj" />
+	</ItemGroup>
+
+</Project>
